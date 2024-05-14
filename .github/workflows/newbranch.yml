@@ -30,7 +30,7 @@ jobs:
         run: npm run build
         env:
           SERVER: production
-          REPO: ${GITHUB_REPOSITORY}
+          REPO: ${{github.event.repository.name}}
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
