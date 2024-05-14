@@ -37,6 +37,8 @@ jobs:
           npx gh-pages -d dist -b deploy -u "CaperAsDev <caper.asdev@gmail.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: install surge
+        run: npm install surge
       - name: Deploy to accountant.surge.sh
         run: surge --project ./ --domain example-githooks.surge.sh
         env:
