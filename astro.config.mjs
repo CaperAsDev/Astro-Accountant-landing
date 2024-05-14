@@ -5,5 +5,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  base: (process.env.SERVER === 'production') ? '/': `/${process.env.REPO}`
+  base: (process.env.SERVER === 'production') ? `/${process.env.REPO}`: '/'
 });
