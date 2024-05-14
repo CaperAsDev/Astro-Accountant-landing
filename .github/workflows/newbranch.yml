@@ -42,5 +42,5 @@ jobs:
         with:
           domain: 'accountant.surge.sh'
           project: '.'
-          login: ${{ secrets.surge_login }}
-          token: ${{ secrets.surge_token }}
+          login: ${{ secrets.SURGE_LOGIN }}
+          token: ${{ secrets.SURGE_TOKEN }}
