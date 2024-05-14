@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+const baseUrl = import.meta.env.BASE_URL;
 
 const navItems = [
   {
@@ -20,7 +21,7 @@ const navItems = [
 <header class="w-full h-fit flex justify-between items-center">
   <Image
     class='object-cover h-full max-h-14'
-    src="/Logo-Ligth.png"
+    src={`${baseUrl}Logo-Ligth.png`}
     alt="descriptive text"
     width="200"
     height="150"
