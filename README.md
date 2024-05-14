@@ -1,4 +1,2 @@
-"git": {
-  "scripts": {
-    "pre-push": "surge --project ./ --domain example-githooks.surge.sh"
-  }
+- [Git hooks & surge](https://github.com/surge-sh/example-githooks?tab=readme-ov-file)
+- [surge & cirlceCI](https://surge.sh/help/integrating-with-circleci)

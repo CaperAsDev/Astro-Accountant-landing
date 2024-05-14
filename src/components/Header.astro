@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets'
+
+const navItems = [
+  {
+    name: 'Inicio',
+    link: '/'
+  },
+  {
+    name: 'Servicios',
+    link: '/services'
+  },
+  {
+    name: 'Noticias',
+    link: '/news'
+  },
+]
+---
+
+<header class="w-full h-fit flex justify-between items-center">
+  <Image
+    class='object-cover h-full max-h-14'
+    src="/Logo-Ligth.png"
+    alt="descriptive text"
+    width="200"
+    height="150"
+  />
+  <navbar>
+    <ul class="flex gap-4">
+      {navItems.map(item => (
+        <li>
+          <a href={item.link}>{item.name}</a>
+        </li>  
+      ))}
+    </ul>
+  </navbar>
+</header>

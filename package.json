@@ -7,17 +7,23 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy:surge": "npm run build && surge --project ./dist --domain accountants-astro.surge.sh"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.8.3",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5",
-    "surge": "^0.23.1"
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "git-scripts": "^0.6.4"
+    "git-scripts": "^0.6.4",
+    "surge": "^0.23.1"
+  },
+  "git": {
+    "scripts": {
+      "post-merge": "npm run build && surge --project ./dist --domain accountants-astro.surge.sh"
+    }
   }
 }

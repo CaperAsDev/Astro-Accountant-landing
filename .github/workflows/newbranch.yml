@@ -28,17 +28,12 @@ jobs:
         run: npm ci
       - name: build
         run: npm run build
-        # env:
-        #   SERVER: production
-        #   REPO: ${{github.event.repository.name}}
+        env:
+          SERVER: pre-production
+          REPO: ${{github.event.repository.name}}
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npx gh-pages -d dist -b deploy -u "CaperAsDev <caper.asdev@gmail.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to accountant.surge.sh
-        run: surge --project ./ --domain example-githooks.surge.sh
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
