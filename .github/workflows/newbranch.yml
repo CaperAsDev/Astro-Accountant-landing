@@ -37,10 +37,3 @@ jobs:
           npx gh-pages -d dist -b deploy -u "CaperAsDev <caper.asdev@gmail.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to accountant.surge.sh
-        uses: dswistowski/surge-sh-action@v1
-        with:
-          domain: 'accountant.surge.sh'
-          project: '.'
-          login: ${{ secrets.SURGE_LOGIN }}
-          token: ${{ secrets.SURGE_TOKEN }}
