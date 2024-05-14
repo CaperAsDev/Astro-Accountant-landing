@@ -14,10 +14,10 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.8.3",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "surge": "^0.23.1"
   },
   "devDependencies": {
-    "git-scripts": "^0.6.4",
-    "surge": "^0.23.1"
+    "git-scripts": "^0.6.4"
   }
 }
