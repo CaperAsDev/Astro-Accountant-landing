@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components'
+const data = [
+  {
+    number: 1,
+    title: 'Outsourcing Contable',
+    content: 'Actuamos en todas las fases del proceso contable de tu organización con un equipo de profesionales certificados en contabilidad internacional.'
+  },
+  {
+    number: 2,
+    title: 'Revisoría Fiscal',
+    content: 'Cumplimiento y planeación fiscal, Soportamos el cumplimiento de las obligaciones locales e internacionales de su organización.'
+  },
+  {
+    number: 3,
+    title: 'Nomina',
+    content: 'Ejecutamos los procesos de liquidación general de nómina para tus empleados locales y expatriados de acuerdo a las normas laborales, contables y fiscales vigentes.'
+  },
+  {
+    number: 4,
+    title: 'Asesoría y Consultoría',
+    content: 'Con herramientas tecnológicas adaptables, te apoyamos en la generación de reportes financieros y de gestión que faciliten la toma de decisiones internas y para dar respuesta oportuna a organis- mos de control.'
+  },
+  {
+    number: 5,
+    title: 'Auditoria',
+    content: 'Disponemos de diferentes servicios de auditoria: Nómina, financiera, especial, operativa, de sistemas de gestión.'
+  },
+  {
+    number: 6,
+    title: 'Capacitaciones',
+    content: 'Ofrecemos capacitaciones en forma periódica a nuestros clientes y profesiona- les que integran el grupo de trabajo'
+  },
+]
+---
+<section>
+  <h2 class='w-full py-3 font-Grotesk text-normal text-center text-3xl lg:text-4xl lg:py-5' >NUESTROS SERVICIOS</h2>
+  <div class="bg-white text-dark p-5 sm:p-10 lg:p-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" >
+    {data.map(item => (
+      <div class="flex flex-wrap sm:flex-nowrap border-b-2 last:border-none sm:border-none ">
+        <span class="border-2 border-dark font-Grotesk text-xl lg:text-2xl rounded-full min-w-8 lg:min-w-10 lg:max-h-10 max-h-8 grid place-items-center">{item.number}</span>
+        <div class="ml-5 mt-3 grid gap-2 place-items-center sm:items-start">
+          <h3 class="font-Grotesk text-2xl lg:text-3xl text-center sm:place-self-start" >{item.title}</h3>
+          <p class="text-center text-black font-Roboto leading-tight sm:text-justify">{item.content}</p>
+          <Icon name="tabler:dots" class="text-accent sm:hidden" />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

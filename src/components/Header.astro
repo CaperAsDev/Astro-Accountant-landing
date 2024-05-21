@@ -1,38 +1,152 @@
 ---
 import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 const baseUrl = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL : '';
 
-const navItems = [
+const services = [
   {
-    name: 'Inicio',
-    link: '/'
+    name: 'Outsourcing Contable',
+    link: '/services#Outsorcing'
   },
   {
-    name: 'Servicios',
+    name: 'Revisoría Fiscal',
+    link: '/services#Revisoria'
+  },
+  {
+    name: 'Nomina',
+    link: '/services#Nomina'
+  },
+  {
+    name: 'Asesoría y Consultoría',
+    link: '/services#Asesoria'
+  },
+  {
+    name: 'Auditoria',
+    link: '/services#Auditoria'
+  },
+  {
+    name: 'Otros Servicios',
     link: '/services'
-  },
-  {
-    name: 'Noticias',
-    link: '/news'
   },
 ]
 ---
 
-<header class="w-full h-fit flex justify-between items-center">
-  <Image
-    class='object-cover h-full max-h-14'
-    src={`${baseUrl}/Logo-Ligth.png`}
-    alt="descriptive text"
-    width="200"
-    height="150"
-  />
-  <navbar>
-    <ul class="flex gap-4">
-      {navItems.map(item => (
+<header class="w-full h-fit grid place-items-center bg-dark font-Roboto">
+  <div class="px-2 sm:p-4 sm:w-full sm:grid sm:place-items-center lg:flex lg:justify-between">
+    <picture class="w-full max-w-sm h-fit max-h-28 p-4" >
+      <Image
+      class='object-contain h-auto w-full overflow-hidden'
+      src={`${baseUrl}/Logo_Ligth.png`}
+      alt="descriptive text"
+      width="1330"
+      height="302"
+      />
+    </picture>
+    <div class="hidden lg:grid">
+      <div class="flex items-center gap-2 w-full p-2 justify-start" >
+        <Icon name="tabler:phone-call" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
+        <div>
+          <a href="tel:+573028565231">Celular: +57 (302) 8565-231</a>
+          <p class="text-accent" >CONTADOR EN LINEA</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 w-full p-2 justify-start flex-wrap" >
+        <Icon name="tabler:mail" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
+        <div>
+          <a href="mailto:contabilidad@excellentiaconsultingbpo.com" class="text-sm">contabilidad@excellentiaconsultingbpo.com</a>
+          <p class="text-accent" >ENVÍA UN MENSAJE</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</header>
+<div class="w-full h-fit grid place-items-center sticky top-0 right-0 z-20 bg-dark font-Roboto">
+  <navbar class="border-y-2 w-full grid place-items-center relative lg:justify-end">
+    <ul class="flex justify-evenly w-full items-center p-2 lg:gap-5 lg:mr-5">
         <li>
-          <a href={item.link}>{item.name}</a>
+          <a
+            href='/'
+            class="block p-2 hover:outline-2 focus:outline-2 focus:outline-accent rounded-md text-accent"
+          >Inicio</a>
         </li>  
-      ))}
+        <li class="grid relative w-20 h-10">
+          <details id="services" class="absolute z-30 inset-0 grid w-max">
+            <summary data-details class="cursor-pointer list-none text-accent p-2 outline-accent rounded-md grid w-fit">Servicios</summary>
+            <ul data-services class="bg-dark p-4 grid gap-2 mt-2">
+              {
+                services.map(service => (
+                  <li class="w-full border-b-[1px] last:border-b-0 pb-[4px]">
+                    <a class="focus:outline-accent hover:outline-accent " href={service.link}>{service.name}</a>
+                  </li>
+                ))
+              }
+              
+            </ul>
+          </details>
+        </li>
+        <li>
+          <a
+            href='/news'
+            class="block p-2 hover:outline-2 focus:outline-2 focus:outline-accent rounded-md text-accent"
+          >Noticias</a>
+        </li>  
     </ul>
   </navbar>
-</header>
+  <details class="w-full sm:max-w-sm text-center h-fit relative border-b-[1px] lg:hidden">
+    <summary data-details class="m-2" >Contactenos</summary>
+    <div class="contact absolute backdrop-blur-sm sm:grid sm:place-items-center sm:w-full">
+      <div class="flex items-center gap-2 w-full p-2 justify-center border-b-[1px]" >
+        <Icon name="tabler:phone-call" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
+        <div>
+          <a href="tel:+573028565231">Celular: +57 (302) 8565-231</a>
+          <p class="text-accent" >CONTADOR EN LINEA</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 w-full p-2 justify-center flex-wrap border-b-[1px]" >
+        <Icon name="tabler:mail" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
+        <div>
+          <a href="mailto:contabilidad@excellentiaconsultingbpo.com" class="text-sm">contabilidad@excellentiaconsultingbpo.com</a>
+          <p class="text-accent" >ENVÍA UN MENSAJE</p>
+        </div>
+      </div>
+    </div>
+  </details>
+</div>
+
+<style >
+  .contact {
+    background-color: #132D4650
+  }
+</style>
+
+<script>
+  const details= document.querySelectorAll('[data-details]')
+  const services= document.querySelectorAll('[data-services] a')
+  console.log(services);
+
+  const newFocus = (focusBefore: HTMLDetailsElement | null)=> {
+    const focus = document.activeElement
+    const closestDetail = focus?.closest('details')
+    if(focusBefore !== closestDetail && focusBefore){
+      focusBefore.open = false
+    }
+    console.log(focusBefore === closestDetail);
+  }
+  
+  details.forEach((detail)=> {
+    detail.addEventListener('blur',()=> {
+      setTimeout(()=> {
+        newFocus(detail.parentElement as HTMLDetailsElement)
+      }, 100)
+    } )
+  })
+
+  services.forEach( service => {
+    service.addEventListener('blur', ()=> {
+      setTimeout(()=> {
+        newFocus(service.closest('details'))
+      },100)
+    })
+  })
+</script>

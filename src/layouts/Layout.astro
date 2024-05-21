@@ -1,6 +1,7 @@
 ---
 import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
+import Whats from '@/components/WhAppButton.astro';
 
 interface Props {
 	title: string;
@@ -19,23 +20,51 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-slate-900">
+	<body class="bg-dark relative">
+		<Whats 
+			number='+57 (302) 8565-231'
+		/>
 		<Header />
 		<slot />
 		<Footer />
 	</body>
 </html>
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+	
+	@font-face {
+		font-family: 'Grotesk';
+		font-style: normal;
+		font-weight: 400 ;
+		font-display: swap ;
+		src: url('/fonts/AkzidenzGroteskBQ-Cnd.woff') format('woff');
+	}
+
+	@font-face {
+		font-family: 'Grotesk';
+		font-style: normal;
+		font-weight: 700 ;
+		font-display: swap ;
+		src: url('/fonts/AkzidenzGroteskBQ-BdCnd_1.woff') format('woff');
+	}
+
+	@font-face {
+		font-family: 'Grotesk';
+		font-style: normal;
+		font-weight: 300 ;
+		font-display: swap ;
+		src: url('/fonts/AkzidenzGroteskBQ-LigCnd.woff') format('woff');
+	}
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--dark: #132D46;
+		--accent: #D9A043;
+		--gradient-dark: #132d467b;
+	}
+	*{
+		box-sizing: border-box;
+	}
+	a{
+		outline-color: var(--accent);
 	}
 	body {
 		color: white

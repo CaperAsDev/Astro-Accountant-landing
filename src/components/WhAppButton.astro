@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  number: string;
+  message?: string;
+}
+const baseUrl = 'https://web.whatsapp.com/send'
+
+const { number, message } = Astro.props
+
+const waNumber = number.replace(/[^\w\s]/gi, '').replace(/ /g, '');
+let url = `${baseUrl}?phone=${waNumber}`;
+
+if (message) {
+  url += `&text=${encodeURI(message)}`;
+}
+
+---
+<a
+  href={url}
+  target="_blank"
+  class="bg-green-600 fixed right-5 bottom-10 p-2 rounded-full z-20 hover:scale-110 focus:scale-110 transition-transform"
+  >
+  <Icon
+    name="tabler:brand-whatsapp"
+    width={40}
+    height={40}
+    class="text-green-100"
+  />
+</a>

@@ -1,5 +1,26 @@
 ---
+import { Image } from "astro:assets";
 ---
-<footer>
-  <p>Mi footer</p>
+<footer class="w-full h-fit grid place-items-center gap-10 font-Roboto text-center px-5 py-20">
+  <Image 
+    src="/Logo_H_ligth.png"
+    alt={'Logo'}
+    height={488}
+    width={456}
+    class='object-contain w-20'
+  />
+  <div>
+    <p >Excellentia Consulting S.A.S</p>
+    <p >NIT: 901822463</p>
+  </div>
+  
+  <div>
+    <p class="text-sm flex flex-wrap justify-center">
+      <a class="px-1" href="mailto:gerencia@excellentiaconsultingbpo.com">gerencia@excellentiaconsultingbpo.com</a>
+      <a class="px-1 border-t-[1px] sm:border-t-0 sm:border-l-[1px] border-accent" href="contabilidad@excellentiaconsultingbpo.com">contabilidad@excellentiaconsultingbpo.com</a>
+    </p>
+    <p >Dirección principal: AK 19 No. 37-20</p>
+    <p >Bogotá - Colombia</p>
+  </div>
+  <small class="text-accent">© Copyright 2024 | Diseño y Desarrollo CaperAsDev - Todos los derechos reservados</small>
 </footer>
