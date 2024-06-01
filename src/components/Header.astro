@@ -1,34 +1,9 @@
 ---
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
-const baseUrl = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL : '';
+import Logo from '@/assets/logo/Logo_Ligth.png'
+import {services} from '@/data/servicesData.json'
 
-const services = [
-  {
-    name: 'Outsourcing Contable',
-    link: '/services#Outsorcing'
-  },
-  {
-    name: 'Revisoría Fiscal',
-    link: '/services#Revisoria'
-  },
-  {
-    name: 'Nomina',
-    link: '/services#Nomina'
-  },
-  {
-    name: 'Asesoría y Consultoría',
-    link: '/services#Asesoria'
-  },
-  {
-    name: 'Auditoria',
-    link: '/services#Auditoria'
-  },
-  {
-    name: 'Otros Servicios',
-    link: '/services'
-  },
-]
 ---
 
 <header class="w-full h-fit grid place-items-center bg-dark font-Roboto">
@@ -36,24 +11,23 @@ const services = [
     <picture class="w-full max-w-sm h-fit max-h-28 p-4" >
       <Image
       class='object-contain h-auto w-full overflow-hidden'
-      src={`${baseUrl}/Logo_Ligth.png`}
-      alt="descriptive text"
-      width="1330"
-      height="302"
+      src={Logo}
+      alt="Exellentia Consulting Accounting, taxes and Legal Services"
+      height={80}
       />
     </picture>
     <div class="hidden lg:grid">
       <div class="flex items-center gap-2 w-full p-2 justify-start" >
         <Icon name="tabler:phone-call" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
         <div>
-          <a href="tel:+573028565231">Celular: +57 (302) 8565-231</a>
+          <a title="Contactenos via telefono" href="tel:+573028565231">Celular: +57 (302) 8565-231</a>
           <p class="text-accent" >CONTADOR EN LINEA</p>
         </div>
       </div>
       <div class="flex items-center gap-2 w-full p-2 justify-start flex-wrap" >
         <Icon name="tabler:mail" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
         <div>
-          <a href="mailto:contabilidad@excellentiaconsultingbpo.com" class="text-sm">contabilidad@excellentiaconsultingbpo.com</a>
+          <a title="Contactenos via Correo" href="mailto:contabilidad@excellentiaconsultingbpo.com" class="text-sm">contabilidad@excellentiaconsultingbpo.com</a>
           <p class="text-accent" >ENVÍA UN MENSAJE</p>
         </div>
       </div>
@@ -77,7 +51,14 @@ const services = [
               {
                 services.map(service => (
                   <li class="w-full border-b-[1px] last:border-b-0 pb-[4px]">
-                    <a class="focus:outline-accent hover:outline-accent " href={service.link}>{service.name}</a>
+                    <a
+                      aria-label={service.title}
+                      title={service.title}
+                      class="focus:outline-accent hover:outline-accent"
+                      href={`/services/#${service.id}`}
+                    >
+                      {service.title}
+                    </a>
                   </li>
                 ))
               }

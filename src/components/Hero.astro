@@ -13,8 +13,11 @@ import heroImage from '@/assets/images/hero-l.jpg'
   <picture class="block brightness-50 w-full h-full" >
     <Image
       src={heroImage}
-      alt="Hero Image"
+      title="Servicios de consultoria contable"
+      alt="Consultoria en contabilidad, impiestos y servicios legales"
       class="w-full h-full object-cover"
+      widths={[240 ,540, 720, 1080, heroImage.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1440px) 1024px, ${heroImage.width}px`}
     />
   </picture>
 </section>

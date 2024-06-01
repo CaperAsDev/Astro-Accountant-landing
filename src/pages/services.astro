@@ -1,0 +1,42 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import HeroServices from '@/components/HeroServices.astro';
+import Service from '@/components/Service.astro'
+import ServicesData from '@/data/servicesData.json'
+---
+<Layout title="Services">
+  <HeroServices />
+  <div class="bg-light w-full h-fit grid place-items-center" >
+    <p class="max-w-4xl text-dark font-Grotesk font-light text-xl md:text-2xl px-2 py-5 md:px-20 md:py-10 text-center ">Ponemos a su disposición los mejores profesionales en contabilidad para que el ejercicio contable de tu empresa sea ágil, oportuno y efectivo con el fin de evitar contratiempos, todo a través de nuestra plataforma web, incluyendo los siguientes servicios:</p>
+  </div>
+  <main class="bg-light grid gap-2">
+    {ServicesData.services.map((service) => (
+      <Service id={service.id} title={service.title}>
+        <ol class="list-decimal p-7 list-outside grid gap-2 md:gap-5 md:ml-5 lg:grid-cols-2 lg:gap-x-20">
+          {service.items.map((item) => 
+            {return item.contable ? (
+                <li>
+                  <span class="font-bold">{item.title}</span>
+                  <p class="">{item.content}</p>
+                  {item.sublist && (
+                    <ul class="list-disc list-outside ml-5 mt-2 md:ml-10">
+                      {item.sublist.map(listItem => (
+                        <li>{listItem.content}</li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <p class="">{item.content}</p>
+              )
+            }
+          )}
+        </ol>
+      </Service>
+    ))}
+  </main>
+  <div class="grid gap-3 place-items-center px-2 py-10 border-t-2 border-b-[1px] border-light md:px-10 md:py-20">
+    <h3 class="text-center font-Grotesk text-5xl">¿Porque Excellentia Consulting?</h3>
+    <p class="text-center">Conoce la manera en que podemos proporcionarte la tranquilidad y confianza necesarias para centrarte en el crecimiento y el éxito de tu empresa.</p>
+  </div>
+</Layout>

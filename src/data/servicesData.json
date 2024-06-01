@@ -1,0 +1,261 @@
+{
+  "services":[
+    {
+      "id": "outsourcing",
+      "title": "Outsourcing Contable",
+      "items": [
+        {
+          "contable": true,
+          "title": "Procesamiento de la información contable del periodo:",
+          "content": "Simplifica tus procesos contables dejándonos el registro y análisis de todas tus transacciones financieras."
+        },
+        {
+          "contable": true,
+          "title": "Registro de la provisión del impuesto diferido bajo NCIF:",
+          "content": "Cumple con las regulaciones fiscales de forma precisa con nuestro servicio de registro de impuestos diferidos bajo Normas Internacionales de Contabilidad Financiera (NCIF)."
+        },
+        {
+          "contable": true,
+          "title": "Registro y control contable de activos fijos, inventarios e intangibles, etc.; Así como cálculos de depreciaciones y amortizaciones:",
+          "content": "Optimiza la gestión de tus recursos con nuestro servicio de registro y control contable de activos fijos, inventarios e intangi- bles, incluyendo cálculos de depreciaciones y amortizaciones."
+        },
+        {
+          "contable": true,
+          "title": "Causación de las provisiones contables y obligaciones:",
+          "content": "Asegura una adecuada presentación de tus responsabilidades financieras con nuestro servicio de causación de provisiones contables y obligaciones."
+        },
+        {
+          "contable": true,
+          "title": "Revisión y registro de ajustes a los estados financieros:",
+          "content": "Garantiza la precisión de tus estados financieros con nuestra revisión y registro de ajustes necesarios."
+        },
+        {
+          "contable": true,
+          "title": "Elaboración de conciliaciones bancarias, cuentas por cobrar, cuentas por pagar y demás cuentas:",
+          "content": "Simplifica la gestión de tu flujo de efectivo con nuestro servicio de elaboración de conciliaciones bancarias y cuentas por cobrar y por pagar."
+        },
+        {
+          "contable": true,
+          "title": "Recepción, revisión y causación de facturas de proveedores:",
+          "content": "Agiliza tus procesos contables con nuestro servicio de recepción, revisión y causación de facturas de proveedores."
+        },
+        {
+          "contable": true,
+          "title": "Preparación de estados financieros NCIF básicos con revelaciones, reportes requeridos y periodicidad de acuerdo a las necesidades de la compañía:",
+          "content": "Cumple con las normativas contables con nuestros estados financieros NCIF básicos, adaptados a tus necesidades y con la información requerida."
+        },
+        {
+          "contable": true,
+          "title": "Emisión de certificados anuales de retención en la fuente a título de renta, ICA e IVA:",
+          "content": "Cumple con tus obligaciones fiscales con nuestra emisión de certificados anuales de retención en la fuente."
+        },
+        {
+          "contable": true,
+          "title": "Preparación y transmisión de información financiera a Supersociedades, Superfinanciera y Dane:",
+          "content": "Asegura la conformidad con los requerimientos legales con nuestro servicio de preparación y transmisión de información financiera a entidades regulatorias."
+        },
+        {
+          "contable": true,
+          "title": "Atención a Auditorías externas e internas de acuerdo a las necesidades de la Compañía:",
+          "content": "Colaboramos estrechamente con auditores internos y externos para garantizar la transparencia y precisión de tus estados financieros."
+        }
+      ]
+    },
+    {
+      "id": "nomina",
+      "title": "Nomina",
+      "items": [
+        {
+          "contable": true,
+          "title": "Ejecución de los procesos de nómina periódica:",
+          "content": "Deja en nuestras manos la ejecución de la nómina periódica, asegurando el cumplimiento de las novedades reportadas y la normatividad laboral vigente, alineados con tus políticas y lineamientos."
+        },
+        {
+          "contable": true,
+          "title": "Preparación de archivo en medio magnético para pago electrónico de nómina:",
+          "content": "Simplifica tus procesos de pago con nuestro servicio de preparación de archivos en medio magnético para el pago electrónico de nómina."
+        },
+        {
+          "contable": true,
+          "title": "Liquidación de aportes y reporte de altas y bajas de personal en la Planilla Integrada de Liquidación de Aportes (Pila):",
+          "content": "Nos encargamos de la liquidación de aportes y del reporte de altas y bajas de personal en la Pila, garantizando el cumplimiento con las entidades del sistema de seguridad social integral y aportes para-fiscales."
+        },
+        {
+          "contable": true,
+          "title": "Cálculo de anticipo de cesantías y sus intereses:",
+          "content": "Calculamos los anticipos de cesantías y sus intereses de acuerdo con las autorizaciones previas de los empleados."
+        },
+        {
+          "contable": true,
+          "title": "Liquidación final por terminación de contrato de trabajo:",
+          "content": "Realizamos la liquidación final por terminación de contrato de trabajo, cumpliendo con la normativa aplicable y proporcionando información precisa y detallada."
+        },
+        {
+          "contable": true,
+          "title": "Cálculo de retenciones en la fuente sobre los pagos laborales:",
+          "content": "Calculamos las retenciones en la fuente sobre los pagos laborales, asegurando el cumplimiento de las obligaciones tributarias."
+        },
+        {
+          "contable": true,
+          "title": "Consolidación mensual de prestaciones sociales y prepara- ción anual de los formatos para consignación anual de cesantías:",
+          "content": "Consolidamos mensualmente las prestaciones sociales y preparamos los formatos para la consignación anual de cesantías, garantizando la correcta gestión de los beneficios laborales."
+        },
+        {
+          "contable": true,
+          "title": "Emisión anual de certificado de ingresos y retenciones laborales:",
+          "content": "Emitimos anualmente los certificados de ingresos y retenciones laborales, facilitando el cumplimiento de tus obligaciones como empleador."
+        },
+        {
+          "contable": true,
+          "title": "Envío de información requerida para auditorías:",
+          "content": "Proporcionamos la información requerida para auditorías, asegurando la transparencia y precisión de tus registros laborales."
+        }
+      ]
+    },
+    {
+      "id": "asesoria",
+      "title": "Asesoría y Consultoría",
+      "items": [
+        {
+          "contable": true,
+          "title": "Actualización sobre cambios en la legislación tributaria:",
+          "content": "Mantente al día con los cambios en la legislación tributaria con nuestro servicio de actualización, que te mantendrá informado sobre las últimas novedades y cómo afectan a tu empresa"
+        },
+        {
+          "contable": true,
+          "title": "Planeación tributaria:",
+          "content": "Optimiza tus impuestos con nuestra planeación tributaria, diseñada para minimizar tu carga fiscal de manera legal y eficiente."
+        },
+        {
+          "contable": true,
+          "title": "Análisis de los efectos impositivos y operaciones con vinculadas en el exterior:",
+          "content": "Analizamos los efectos impositivos y las operaciones con vinculadas en el exterior, asegurando el cumplimiento de las regulaciones y maximizando los beneficios para tu empresa."
+        },
+        {
+          "contable": true,
+          "title": "Atención visitas autoridades fiscales:",
+          "content": "Te asistimos en la atención de visitas de las autoridades fiscales, brindando apoyo y representación para garantizar una respuesta adecuada y cumplir con las obligaciones legales."
+        }
+      ]
+    },
+    {
+      "id": "auditoria",
+      "title": "Auditoria",
+      "items": [
+        {
+          "contable":true,
+          "title": "Servicio de auditoría contable y financiera:",
+          "content":"Además, ofrecemos servicios de auditoría contable y financiera para garantizar la precisión y transparencia de tus estados financieros. Esto incluye:",
+          "sublist" : [
+            {
+              "listable": true,
+              "contable": false,
+              "title": "",
+              "content":"Revisión exhaustiva de los estados financieros para detectar posibles errores o irregularidades."
+            },
+            {
+              "listable": true,
+              "contable": false,
+              "title": "",
+              "content":"Evaluación de los controles internos para asegurar la integridad de la información financiera."
+            },
+            {
+              "listable": true,
+              "contable": false,
+              "title": "",
+              "content":"Análisis detallado de los procedimientos contables y financie- ros para identificar áreas de mejora y optimización."
+            },
+            {
+              "listable": true,
+              "contable": false,
+              "title": "",
+              "content":"Emisión de informes detallados con recomendaciones para fortalecer la gestión financiera de tu empresa."
+            }
+          ]
+        },
+        {
+          "contable":false,
+          "title": "",
+          "content":"Con nuestra combinación de servicios, te ayudamos a mantener la salud financiera de tu empresa, cumplir con las obligaciones tributarias y mejorar la eficiencia en la gestión de tus recursos."
+        }
+      ]
+    },
+    {
+      "id": "revisoria",
+      "title": "Revisoría Fiscal",
+      "items":[
+        {
+          "contable": true,
+          "title": "Preparación de declaración anual de renta:",
+          "content": "Simplificamos tu declaración de renta para cumplir con tus obligaciones fiscales anuales."
+        },
+        {
+          "contable": true,
+          "title": "Reporte de conciliación fiscal para la Administración Tributaria:",
+          "content": "Preparamos el reporte necesario para la Administración Tributaria, garantizando la precisión y cumplimiento normativo."
+        },
+        {
+          "contable": true,
+          "title": "Cálculo anual de provisión de renta e impuesto diferido:",
+          "content": "Realizamos los cálculos necesarios para la provisión de renta e impuesto diferido, optimizando tu planificación fiscal."
+        },
+        {
+          "contable": true,
+          "title": "Declaración de activos en el exterior:",
+          "content": "Cumplimos con la preparación de la declaración de tus activos en el exterior según las regulaciones pertinentes."
+        },
+        {
+          "contable": true,
+          "title": "Elaboración de medios magnéticos nacionales y municipales:",
+          "content": "Simplificamos tus obligaciones fiscales con la elaboración de medios magnéticos para entidades nacionales y municipales."
+        },
+        {
+          "contable": true,
+          "title": "Declaraciones recurrentes de retención en la fuente, autorretención a título de renta, IVA e ICA:",
+          "content": "Nos encargamos de todas tus declaraciones recurrentes, asegurando el cumplimiento tributario en retenciones, autorretenciones e impuestos indirectos."
+        },
+        {
+          "contable": true,
+          "title": "Respuesta a requerimientos de información de la DIAN o autoridades distritales:",
+          "content": "Atendemos y respondemos a los requerimientos ordinarios de información de la DIAN u otras autoridades tributarias."
+        },
+        {
+          "contable": true,
+          "title": "Actualización del RUT y el RIT, y solicitudes de autorización de facturación:",
+          "content": "Mantenemos al día tu Registro Único Tributario (RUT) y Registro de Información Tributaria (RIT), y gestionamos autorizaciones de facturación."
+        },
+        {
+          "contable": true,
+          "title": "Atención de consultas internas recurrentes sobre operación:",
+          "content": "Estamos disponibles para resolver tus consultas internas recurrentes sobre operación y asuntos tributarios."
+        },
+        {
+          "contable": true,
+          "title": "Solicitud de devoluciones de saldos a favor de impuestos:",
+          "content": "Gestionamos las solicitudes de devolución de saldos a favor de impuestos, asegurando el aprovechamiento efectivo de tus recursos financieros."
+        },
+        {
+          "contable": false,
+          "title": "",
+          "content": "Además, ofrecemos servicios de auditoría contable y financiera para garantizar la precisión y conformidad con las normativas fiscales y contables vigentes."
+        }
+      ]
+    },
+    {
+      "id": "otros",
+      "title": "Otros Servicios",
+      "items": [
+        {
+          "contable":false,
+          "title": "",
+          "content": "Brindamos además soporte en requerimientos de organismos de control, legislación laboral, procesos de contratación, asesoría en temas cambiarios, comerciales, impuestos internacionales, precios de transferencia, servicios legales y de seguridad social, entre otros."
+        },
+        {
+          "contable":false,
+          "title": "",
+          "content": "Ofrecemos capacitaciones y estructuración de procesos para garantizar la eficiencia y el cumplimiento normativo en tu empresa."
+        }
+      ]
+    }
+  ]
+}

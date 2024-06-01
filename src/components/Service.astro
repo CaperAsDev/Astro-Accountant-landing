@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  id: string;
+}
+const {title, id} = Astro.props
+---
+<article id={ id } class="bg-dark p-2 sm:p-5 md:p-10 lg:p-20 grid place-items-center">
+  <div class="lg:max-w-5xl grid lg:place-items-center" >
+    <h2 class="font-Grotesk font-normal w-full text-5xl text-accent py-5 justify-self-start text-center sm:text-start">{title}</h2>
+    <slot />
+    <div class="md:m-10 m-2 grid place-items-center md:justify-end justify-self-end" >
+      <p class="text-2xl font-Grotesk text-accent w-full text-end max-w-4xl">¡Comienza con una consulta sencilla!</p>
+    </div>
+  </div>
+</article>

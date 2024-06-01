@@ -25,7 +25,7 @@
   },
   "git": {
     "scripts": {
-      "post-merge": "npm run build && surge --project ./dist --domain accountants-astro.surge.sh"
+      "pre-push": "npm run build && surge --project ./dist --domain accountants-astro.surge.sh"
     }
   }
 }

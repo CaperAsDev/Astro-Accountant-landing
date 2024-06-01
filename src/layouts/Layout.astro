@@ -17,6 +17,8 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -56,6 +58,7 @@ const { title } = Astro.props;
 		src: url('/fonts/AkzidenzGroteskBQ-LigCnd.woff') format('woff');
 	}
 	:root {
+		--light: #fff;
 		--dark: #132D46;
 		--accent: #D9A043;
 		--gradient-dark: #132d467b;

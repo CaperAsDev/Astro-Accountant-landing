@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets'
+import heroImage from '@/assets/images/servicesHero.jpg'
+
+---
+<section class="relative w-full h-fit overflow-hidden">
+  <div class="w-full h-full absolute inset-0 z-10 bg-gradient-to-b from-gradient to-gradient via-transparent" />
+  <div class="relative grid z-10 p-10 md:p-20 w-full gap-5 md:gap-10 lg:gap-16 h-fit">
+    <div class="grid items-start max-w-lg">
+      <h1 class="text-ligth-0 font-normal text-6xl lg:text-7xl font-Grotesk max-w-sm text-balance mb-2 text-accent">Nuestros Servicios</h1>
+      <p class="text-ligth-0 font-light text-xl lg:text-2xl font-Grotesk border-b-2 leading-6 py-2 border-accent md:py-5">Dispón de la mejor información actualizada en tiempo real con la que tendrás una visión completa del estado de tu empresa, abarcamos todos los sectores del mercado.</p>
+      <p class="text-ligth-0 font-light text-xl lg:text-2xl font-Grotesk leading-5 lg:leading-tight py-2 mt-2 w-full">¡Asesoría Contable y Financiera que impulsa tu Negocio!</p>
+    </div>
+    <a
+      aria-label="agenda tu asesoria ahora"
+      title="agenda tu asesoría"
+      target="_blank"
+      href="https://web.whatsapp.com/send?phone=573028565231"
+      class="px-10 py-2 h-fit grid place-self-end bg-accent w-fit place-items-center rounded-md text-light hover:scale-110 focus:scale-110 transition-transform font-Grotesk leading-tight text-lg"
+    >
+      <span>Solicita tu asesoría</span>
+      <span aria-hidden={true} >¡Aquí!</span>
+    </a>
+  </div>
+  <picture class="absolute top-0 brightness-50 w-full h-full" >
+    <Image
+      src={heroImage}
+      alt="Hero Image"
+      class="w-full h-full object-cover"
+      widths={[240 ,540, 720, 1080, heroImage.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1440px) 1024px, ${heroImage.width}px`}
+    />
+  </picture>
+</section>
