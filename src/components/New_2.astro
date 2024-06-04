@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  article: {
+    title: string;
+    paragraphs: string[];
+    footer: string[];
+    image: string;
+  }
+  image: () => Promise<{
+    default: ImageMetadata;
+  }>
+}
+
+const { article, image } = Astro.props
+
+---
+
+<section class="p-5 md:p-10 lg:p-20 grid place-items-center even:bg-light group">
+    <div class="w-full max-w-5xl md:grid md:place-items-center">
+      <h2 class="font-Grotesk text-accent text-3xl lg:text-5xl text-center mb-4">{article.title}</h2>
+      <div class="lg:columns-2 my-5">
+        {article.paragraphs.map((content)=> (
+          <p class="font-normal py-2 group-even:text-dark text-justify">{content}</p>
+        ))}
+      </div>
+      <Image
+        class="w-full h-auto object-contain my-2 md:max-w-4xl"
+        src={image()}
+        alt={article.title}
+        widths={[240, 540, 720, 1024]}
+        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1024px) 720px`}
+      />
+      <div class="grid place-items-center text-center lg:mt-5 lg:max-w-4xl">
+        {article.footer.map((content)=> (
+          <p class="py-2 group-even:text-dark">{content}</p>
+        ))}
+      </div>
+    </div> 
+</section>

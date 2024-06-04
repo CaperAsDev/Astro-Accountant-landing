@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  article: {
+    title: string;
+    image: string;
+    intro: string;
+    conclusion: string;
+    points: {
+        header: string;
+        paragraphs: string[];
+    }[];
+  }
+  image: () => Promise<{
+    default: ImageMetadata;
+  }>
+}
+
+const { article, image } = Astro.props
+
+---
+
+<section class="p-5 md:p-10 lg:p-20 grid place-items-center even:bg-light group">
+  <div class="w-full max-w-5xl md:grid md:place-items-center">
+    <h2 class="font-Grotesk text-accent text-3xl lg:text-5xl text-center mb-4">{article.title}</h2>
+    <Image
+      class="w-full h-auto object-cover py-2 md:max-h-[60vh]"
+      src={image()}
+      alt={article.title}
+      widths={[240, 540, 720, 1024]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1024px) 720px`}
+    />
+    {article.intro && (
+      <p class="font-semibold text-center py-2 border-t-[1px] border-accent md:max-w-2xl md:py-5 group-even:text-dark">{article.intro}</p>
+    )}
+    <div class="md:grid md:grid-cols-2 md:gap-5 lg:my-5 lg:gap-10 lg:max-w-5xl">
+      {article.points.map((content, index)=> (
+        <div class="last:odd:col-span-2">
+          <p class="font-semibold py-2 group-even:text-dark">{index + 1}. {content.header}</p>
+          <div class="pl-2 border-l-[1px] md:border-0 md:p-0 border-accent">
+            {content.paragraphs.map(par => (
+              <p class="text-justify text-slate-300 group-even:text-slate-600">{par}</p>
+            ))}  
+          </div>
+        </div>
+      ))}
+    </div>
+    {article.conclusion && (
+      <p class="font-bold text-center text-accent py-2 lg:mt-5 lg:text-xl">Conclusión</p>
+      <p class="text-center md:max-w-2xl">{article.conclusion}</p>
+    )}
+  </div>
+</section>

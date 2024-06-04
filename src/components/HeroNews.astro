@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import heroImage from '@/assets/images/newsHero.jpg'
+
+---
+<section class="relative w-full h-fit overflow-hidden">
+  <div class="w-full h-full absolute inset-0 z-10 bg-gradient-to-b from-gradient to-gradient via-transparent" />
+  <div class="relative grid z-10 p-10 md:p-20 w-full gap-5 md:gap-10 lg:gap-16 h-fit">
+    <div class="grid items-start max-w-lg">
+      <h1 class="text-ligth-0 font-normal text-6xl md:text-7xl lg:text-9xl font-Grotesk max-w-sm text-balance mb-2 text-accent">Noticias</h1>
+      <p class="text-ligth-0 font-light text-xl md:text-2xl lg:text-4xl font-Grotesk border-b-2 leading-6 py-2 border-accent md:py-5">Asesoría Contable y Financiera en Colombia</p>
+    </div>
+    <p class="text-ligth-0 font-normal text-center text-xl md:text-2xl lg:text-4xl font-Grotesk leading-5 lg:leading-tight py-2 mt-2 w-full">¡Mantente actualizado con las noticias más importantes del mundo económico y de interés para tu empresa</p>
+  </div>
+  <picture class="absolute top-0 brightness-50 w-full h-full" >
+    <Image
+      src={heroImage}
+      alt="Noticias relevantes en el mundo de la contabilidad"
+      class="w-full h-full object-cover"
+      widths={[240 ,540, 720, 1080, heroImage.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1440px) 1024px, ${heroImage.width}px`}
+    />
+  </picture>
+</section>

@@ -1,0 +1,26 @@
+---
+import type { ImageMetadata } from 'astro';
+
+import Layout from '@/layouts/Layout.astro'
+import HeroNews from '@/components/HeroNews.astro'
+import New from '@/components/New.astro'
+import New_2 from '@/components/New_2.astro'
+import {layout_1, layout_2} from '@/data/newsData.json'
+
+const images = import.meta.glob<{default: ImageMetadata}>('/src/assets/images/news-*.{jpg,png}')
+
+---
+
+<Layout title='Noticias'>
+  <HeroNews />
+  {layout_1.map((article) => (
+    <New article={article} image={images[article.image]} />
+  ))}
+  {layout_2.map((article) => (
+    <New_2 article={article} image={images[article.image]} />
+  ))}
+  <div class="grid gap-3 place-items-center px-2 py-10 border-t-2 border-dark md:px-10 md:py-20 bg-light">
+    <h3 class="text-center font-Grotesk text-5xl text-dark">¿Porque Excellentia Consulting?</h3>
+    <p class="text-center max-w-3xl text-slate-600">Conoce la manera en que podemos proporcionarte la tranquilidad y confianza necesarias para centrarte en el crecimiento y el éxito de tu empresa.</p>
+  </div>
+</Layout>
