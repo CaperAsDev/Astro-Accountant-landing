@@ -1,5 +1,6 @@
 {"layout_1":[
   {
+    "id": "tercerizacion",
     "title": "Tendencias en la Tercerización de Servicios Contables en 2024",
     "image": "/src/assets/images/news-1.jpg",
     "intro": "En 2024, la tercerización de servicios contables está siendo moldeada por varias tendencias clave:",
@@ -38,6 +39,7 @@
     ]
   },
   {
+    "id": "gestion",
     "title":"Consejos para la Optimización de la Gestión Financiera Empresarial en 2024",
     "intro": "La gestión financiera eficiente es esencial para el éxito de cualquier empresa. En 2024, adoptar estrategias para optimi- zar la gestión financiera es crucial. Aquí tienes algunos conse- jos prácticos:",
     "conclusion": "",
@@ -88,6 +90,7 @@
     ]
   },
   {
+    "id": "legislacion",
     "title": "Cambios en la Legislación Fiscal y Contable 2024 en Colombia",
     "intro": "En 2024, Colombia enfrenta una serie de cambios en la legislación fiscal y contable que afectarán a todas las empresas. Mantenerse al día con estas modificaciones es crucial para garantizar el cumplimiento normativo y optimizar la gestión financiera. A continuación, se presentan los principales cambios y sus implicaciones:",
     "conclusion": "Los cambios en la legislación fiscal y contable en Colombia para 2024 presentan desafíos y oportunidades para las empresas. Es fundamental mantenerse informado y trabajar de cerca con asesores fiscales y contables para asegurar el cumplimiento normativo y aprovechar al máximo los beneficios disponibles. Adaptarse a estas modificaciones permitirá a las empresas optimizar su gestión financiera y contribuir al desarrollo económico del país.",
@@ -139,6 +142,7 @@
 ],
 "layout_2": [
   {
+    "id": "retencion",
     "title": "Tabla de Retención en la Fuente para el Año 2024 en Colombia",
     "paragraphs":[
       "Se conoce como retención en la fuente al mecanismo de recaudo anticipado sobre algunos de los impuestos. En otras palabras, a través de la retención el Estado recauda progresivamente los recursos de algunos impuestos en el momento justo en el que se den.",

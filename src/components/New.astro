@@ -3,6 +3,7 @@ import { Image } from 'astro:assets'
 
 interface Props {
   article: {
+    id: string
     title: string;
     image: string;
     intro: string;
@@ -21,7 +22,7 @@ const { article, image } = Astro.props
 
 ---
 
-<section class="p-5 md:p-10 lg:p-20 grid place-items-center even:bg-light group">
+<section id={article.id} class="p-5 md:p-10 lg:p-20 grid place-items-center even:bg-light group">
   <div class="w-full max-w-5xl md:grid md:place-items-center">
     <h2 class="font-Grotesk text-accent text-3xl lg:text-5xl text-center mb-4">{article.title}</h2>
     <Image

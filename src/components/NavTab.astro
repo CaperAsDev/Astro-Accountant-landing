@@ -1,0 +1,36 @@
+---
+interface Props {
+  list: {
+    dataAtt: string
+    items:{
+      link: string
+      id:string
+      title:string
+    }[]
+  }
+}
+const { list } = Astro.props
+
+---
+<li class="grid relative w-20 h-10">
+  <details class="absolute z-30 inset-0 grid w-max">
+    <summary data-summary class="cursor-pointer list-none text-accent p-2 outline-accent rounded-md grid w-fit">{list.dataAtt}</summary>
+    <ul data-container class="absolute w-[55vw] md:w-max max-w-xs right-0 bg-dark p-4 grid gap-2 mt-2">
+      {
+        list.items.map(item => (
+          <li class="w-full  border-b-[1px] last:border-b-0 pb-[4px]">
+            <a
+              aria-label={item.title}
+              title={item.title}
+              class="focus:outline-accent hover:outline-accent flex flex-wrap"
+              href={`/${item.link}/#${item.id}`}
+            >
+              {item.title}
+            </a>
+          </li>
+        ))
+      }
+      
+    </ul>
+  </details>
+</li>

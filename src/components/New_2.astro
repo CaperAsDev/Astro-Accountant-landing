@@ -3,6 +3,7 @@ import { Image } from 'astro:assets'
 
 interface Props {
   article: {
+    id: string
     title: string;
     paragraphs: string[];
     footer: string[];
@@ -17,7 +18,7 @@ const { article, image } = Astro.props
 
 ---
 
-<section class="p-5 md:p-10 lg:p-20 grid place-items-center even:bg-light group">
+<section id={article.id} class="p-5 md:p-10 lg:p-20 grid place-items-center even:bg-light group">
     <div class="w-full max-w-5xl md:grid md:place-items-center">
       <h2 class="font-Grotesk text-accent text-3xl lg:text-5xl text-center mb-4">{article.title}</h2>
       <div class="lg:columns-2 my-5">
@@ -29,8 +30,8 @@ const { article, image } = Astro.props
         class="w-full h-auto object-contain my-2 md:max-w-4xl"
         src={image()}
         alt={article.title}
-        widths={[240, 540, 720, 1024]}
-        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1024px) 720px`}
+        widths={[540, 720, 1024]}
+        sizes={`(max-width: 720px) 540px, (max-width: 1024px) 720px, 1024px`}
       />
       <div class="grid place-items-center text-center lg:mt-5 lg:max-w-4xl">
         {article.footer.map((content)=> (

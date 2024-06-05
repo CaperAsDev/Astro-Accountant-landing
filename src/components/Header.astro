@@ -1,13 +1,20 @@
 ---
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
-import Logo from '@/assets/logo/Logo_Ligth.png'
-import {services} from '@/data/servicesData.json'
 
+import Logo from '@/assets/logo/Logo_Ligth.png'
+import NavTab from '@/components/NavTab.astro'
+
+import {services} from '@/data/servicesData.json'
+import {layout_1, layout_2} from '@/data/newsData.json'
+
+const idsNews = [...layout_1, ...layout_2].map(article => ({id: article.id, title: article.title, link: "news"}))
+
+const serviceItems = services.map(article => ({id: article.id, title: article.title, link: "services"}))
 ---
 
 <header class="w-full h-fit grid place-items-center bg-dark font-Roboto">
-  <div class="px-2 sm:p-4 sm:w-full sm:grid sm:place-items-center lg:flex lg:justify-between">
+  <div class="px-2 sm:p-4 md:px-10 lg:px-16 sm:w-full sm:grid sm:place-items-center lg:flex lg:justify-between">
     <picture class="w-full max-w-sm h-fit max-h-28 p-4" >
       <Image
       class='object-contain h-auto w-full overflow-hidden'
@@ -37,7 +44,7 @@ import {services} from '@/data/servicesData.json'
   
 </header>
 <div class="w-full h-fit grid place-items-center sticky top-0 right-0 z-20 bg-dark font-Roboto">
-  <navbar class="border-y-2 w-full grid place-items-center relative lg:justify-end">
+  <navbar class="border-y-2 w-full grid place-items-center relative lg:justify-end lg:px-16">
     <ul class="flex justify-evenly w-full items-center p-2 lg:gap-5 lg:mr-5">
         <li>
           <a
@@ -45,39 +52,19 @@ import {services} from '@/data/servicesData.json'
             class="block p-2 hover:outline-2 focus:outline-2 focus:outline-accent rounded-md text-accent"
           >Inicio</a>
         </li>  
-        <li class="grid relative w-20 h-10">
-          <details id="services" class="absolute z-30 inset-0 grid w-max">
-            <summary data-details class="cursor-pointer list-none text-accent p-2 outline-accent rounded-md grid w-fit">Servicios</summary>
-            <ul data-services class="bg-dark p-4 grid gap-2 mt-2">
-              {
-                services.map(service => (
-                  <li class="w-full border-b-[1px] last:border-b-0 pb-[4px]">
-                    <a
-                      aria-label={service.title}
-                      title={service.title}
-                      class="focus:outline-accent hover:outline-accent"
-                      href={`/services/#${service.id}`}
-                    >
-                      {service.title}
-                    </a>
-                  </li>
-                ))
-              }
-              
-            </ul>
-          </details>
-        </li>
-        <li>
-          <a
-            href='/news'
-            class="block p-2 hover:outline-2 focus:outline-2 focus:outline-accent rounded-md text-accent"
-          >Noticias</a>
-        </li>  
+        <NavTab list={{
+          dataAtt: "Servicios",
+          items: serviceItems
+        }} />
+        <NavTab list={{
+          dataAtt: "Noticias",
+          items: idsNews
+        }} /> 
     </ul>
   </navbar>
   <details class="w-full sm:max-w-sm text-center h-fit relative border-b-[1px] lg:hidden">
-    <summary data-details class="m-2" >Contactenos</summary>
-    <div class="contact absolute backdrop-blur-sm sm:grid sm:place-items-center sm:w-full">
+    <summary data-summary class="m-2" >Contactenos</summary>
+    <div data-container class="contact absolute backdrop-blur-sm sm:grid sm:place-items-center sm:w-full">
       <div class="flex items-center gap-2 w-full p-2 justify-center border-b-[1px]" >
         <Icon name="tabler:phone-call" class='w-10 h-10 border-2 rounded-full p-1 text-accent border-accent' />
         <div>
@@ -103,9 +90,8 @@ import {services} from '@/data/servicesData.json'
 </style>
 
 <script>
-  const details= document.querySelectorAll('[data-details]')
-  const services= document.querySelectorAll('[data-services] a')
-  console.log(services);
+  const summaries= document.querySelectorAll('[data-summary]')
+  const links= document.querySelectorAll('[data-container] a')
 
   const newFocus = (focusBefore: HTMLDetailsElement | null)=> {
     const focus = document.activeElement
@@ -113,22 +99,17 @@ import {services} from '@/data/servicesData.json'
     if(focusBefore !== closestDetail && focusBefore){
       focusBefore.open = false
     }
-    console.log(focusBefore === closestDetail);
   }
-  
-  details.forEach((detail)=> {
-    detail.addEventListener('blur',()=> {
+
+  const focusableBlurEvent = (elem: Element)=> {
+    elem.addEventListener('blur',()=> {
       setTimeout(()=> {
-        newFocus(detail.parentElement as HTMLDetailsElement)
+        newFocus(elem.closest('details'))
       }, 100)
     } )
-  })
-
-  services.forEach( service => {
-    service.addEventListener('blur', ()=> {
-      setTimeout(()=> {
-        newFocus(service.closest('details'))
-      },100)
-    })
-  })
+  }
+  
+  summaries.forEach(focusableBlurEvent)
+  links.forEach(focusableBlurEvent)
+  
 </script>
