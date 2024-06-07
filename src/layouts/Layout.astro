@@ -36,6 +36,9 @@ const { title, description, ogImage, route, ogTitle, imgAlt } = Astro.props;
 					type: 'website',
 					image: ogImage
 				},
+				optional: {
+					description: description
+				},
 				image: {
 					alt: imgAlt
 				}
