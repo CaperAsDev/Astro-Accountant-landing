@@ -18,7 +18,7 @@ const images = import.meta.glob<{default: ImageMetadata}>('/src/assets/images/ne
   description='Asesoría Contable y Financiera en Colombia'
   route="/news"
   ogTitle='¡Mantente actualizado con las noticias más importantes del mundo económico!'
-  ogImage='/Logo_H_ligth.png'
+  ogImage={new URL('/Logo_H_ligth.png', import.meta.env.SITE).href}
   imgAlt='Trabajamos alineados y respondemos con agilidad a los requerimientos de tu modelo de negocio'
 >
   <HeroNews />
