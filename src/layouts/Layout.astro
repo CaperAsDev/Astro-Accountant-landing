@@ -1,25 +1,46 @@
 ---
 import Header from '@/components/Header.astro';
 import Whats from '@/components/WhAppButton.astro';
+import { SEO } from 'astro-seo'
 
 interface Props {
 	title: string;
+	description: string;
+	ogImage: string;
+	route:string;
+	ogTitle: string;
+	imgAlt: string;
 }
 
-const { title } = Astro.props;
+const { title, description, ogImage, route, ogTitle, imgAlt } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<SEO 
+			{title}
+			{description}
+			canonical={new URL(route, import.meta.env.SITE).href}
+			titleDefault='Excellentia Consulting'
+			openGraph={{
+				basic: {
+					title: ogTitle,
+					type: 'website',
+					image: ogImage
+				},
+				image: {
+					alt: imgAlt
+				}
+			}}
+		/>
 	</head>
 	<body class="bg-dark relative">
 		<Whats 

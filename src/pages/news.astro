@@ -13,7 +13,14 @@ const images = import.meta.glob<{default: ImageMetadata}>('/src/assets/images/ne
 
 ---
 
-<Layout title='Noticias'>
+<Layout
+  title="Noticias | Excellentia Consulting"
+  description='Asesoría Contable y Financiera en Colombia'
+  route="/news"
+  ogTitle='¡Mantente actualizado con las noticias más importantes del mundo económico y de interés para tu empresa'
+  ogImage='/Logo_H_ligth.png'
+  imgAlt='Trabajamos alineados y respondemos con agilidad a los requerimientos de tu modelo de negocio'
+>
   <HeroNews />
   {layout_1.map((article) => (
     <New article={article} image={images[article.image]} />

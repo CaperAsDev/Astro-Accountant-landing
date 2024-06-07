@@ -5,10 +5,19 @@ import HomeServices from '@/components/HomeServices.astro';
 import ChooseUs from '@/components/ChooseUs.astro';
 import Social from '@/components/Social.astro';
 import Footer from '@/components/Footer.astro';
-
+/* 
+title, description, ogImage, route, ogTitle, imgAlt
+ */
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Excellentia Consulting"
+	description='Deja en manos de expertos la gestión de tus procesos financieros, contables y fiscales, así puedes dedicarte plenamente a impulsar tu negocio.'
+	route="/"
+	ogTitle='Actuamos en todas las fases del proceso contable de tu organización con un equipo de profesionales certificados en contabilidad internacional.'
+	ogImage='/Logo_H_ligth.png'
+	imgAlt='Conoce la manera en que podemos proporcionarte la tranquilidad y confianza necesarias para centrarte en el crecimiento y el éxito de tu empresa.'
+>
 	<main>
 		<Hero />
 		<HomeServices />
