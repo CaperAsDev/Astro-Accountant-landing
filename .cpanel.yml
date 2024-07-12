@@ -2,6 +2,16 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bpo/public_html
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R fonts $DEPLOYPATH
+    - /bin/cp -R news $DEPLOYPATH
+    - /bin/cp -R services $DEPLOYPATH
+    - /bin/cp 404.html $DEPLOYPATH
+    - /bin/cp Logo_H_ligth.png $DEPLOYPATH
+    - /bin/cp favicon.svg $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp robots.txt $DEPLOYPATH
+    - /bin/cp sitemap-0.xml $DEPLOYPATH
+    - /bin/cp sitemap-index.xml $DEPLOYPATH
     - find $DEPLOYPATH -type d -exec chmod 755 {} \;
     - find $DEPLOYPATH -type f -exec chmod 644 {} \;
