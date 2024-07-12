@@ -45,7 +45,7 @@ const serviceItems = services.map(article => ({id: article.id, title: article.ti
 </header>
 <div class="w-full h-fit grid place-items-center sticky top-0 right-0 z-20 bg-dark font-Roboto">
   <navbar class="border-y-2 w-full grid place-items-center relative lg:justify-end lg:px-16">
-    <ul class="flex justify-evenly w-full items-center p-2 lg:gap-5 lg:mr-5">
+    <ul class="flex justify-evenly w-full items-center p-2 px-0 lg:gap-5 lg:mr-5">
         <li>
           <a
             href='/'
@@ -60,6 +60,12 @@ const serviceItems = services.map(article => ({id: article.id, title: article.ti
           dataAtt: "Noticias",
           items: idsNews
         }} /> 
+        <li>
+          <a
+            href='/news/#compromiso'
+            class="p-2 hover:outline-2 focus:outline-2 focus:outline-accent rounded-md text-accent text-sm text-center inline-flex w-min sm:text-base sm:text-nowrap"
+          >Compromiso Social</a>
+        </li>
     </ul>
   </navbar>
   <details class="w-full sm:max-w-sm text-center h-fit relative border-b-[1px] lg:hidden">

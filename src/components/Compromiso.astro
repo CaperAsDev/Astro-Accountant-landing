@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets'
+import Logo from '@/assets/logo/Logo_H_ligth.png'
+import heroImage from '@/assets/images/CompromisoHero.jpg'
+import compromiso from '@/assets/images/Compromiso-2.jpeg'
+
+
+---
+
+<section
+  id="compromiso"
+>
+  <div class="relative">
+    <div class="relative z-10 p-5 grid place-items-center bg-gradient-to-b from-blue-950/50 to-blue-950/50 via-transparent sm:flex sm:flex-row-reverse sm:justify-between sm:p-10 lg:p-20">
+      <Image 
+        src={Logo}
+        alt="Excellentia Consulting"
+        width={150}
+        class="sm:w-20 sm:self-start flex-grow-0 lg:w-28"
+      />
+      <div class="text-center font-Grotesk mt-5 sm:w-full sm:grid lg:gap-10">
+        <h2 class="text-3xl text-accent sm:text-5xl sm:flex-grow sm:text-start max-w-sm lg:text-6xl lg:max-w-md">Nuestro Compromiso Social</h2>
+        <div class="mt-2 max-w-sm sm:justify-self-end sm:mr-20 lg:justify-self-center lg:m-0">
+          <p class="text-xl sm:text-2xl lg:text-4xl">Por un futuro Mejor...</p>
+          <p class="font-light text-xl border-b-2 border-accent lg:text-2xl">Asesoría Contable y Financiera en Colombia</p>
+        </div>
+      </div>
+    </div>
+    <picture class="absolute top-0 saturate-50 brightness-50 w-full h-full" >
+      <Image
+        src={heroImage}
+        alt="Unidos por una causa"
+        class="w-full h-full object-cover"
+        widths={[240 ,540, 720, 1080, heroImage.width]}
+        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1440px) 1024px, ${heroImage.width}px`}
+      />
+    </picture>
+  </div>
+  <div class="grid place-items-center lg:grid-cols-3">
+    <div class="flex flex-col justify-evenly items-center h-full text-center p-5 py-10 gap-4 max-w-md lg:col-span-1 lg:p-10">
+      <p class="font-Grotesk font-light text-xl text-slate-300">IMPULSAMOS EL CRECIMIENTO
+        INTEGRAL DE NUESTRO PAÍS</p>
+      <p class="font-Grotesk text-3xl">¡ÚNETE A NOSOTROS!</p>
+      <p class="font-light text-slate-300 text-sm">Con nuestro proyecto, capacitamos a jóvenes vulnerables de Bogotá en contabilidad, nómina e impuestos locales.</p>
+      <p class="font-light text-slate-300 text-sm">¡Preparamos el camino para un futuro brillante!</p>
+      <a
+        href="https://wa.me/573028565231"
+        class="px-10 py-2 h-fit grid bg-accent w-fit place-items-center rounded-md text-light hover:scale-110 focus:scale-110 transition-transform font-Grotesk leading-tight text-lg"
+      >
+        <span>Conoce mas del proyecto</span>
+        <span aria-hidden={true} >¡Aquí!</span>
+      </a>
+    </div>
+    <div class="relative h-fit w-full grid lg:col-span-2 lg:h-full">
+      <div class="relative z-10 flex flex-col justify-around w-full h-96 p-5 max-w-md justify-self-end lg:p-10 lg:max-w-xl lg:gap-10 lg:mt-20">
+        <p class="font-extrabold text-xl text-end max-w-xs self-end">#PROYECTO EDUCATIVO CONTABLE 2024</p>
+        <p class="font-Grotesk text-2xl text-accent text-end text-pretty lg:text-4xl">COMPARTE TU TIEMPO Y EXPERIENCIA CON CIENTOS DE JÓVENES QUE LO APROVECHARAN PARA CONSTRUIR UN FUTURO MEJOR</p>
+      </div>
+      <picture class="absolute top-0 saturate-50 brightness-50 w-full h-full" >
+        <Image
+          src={compromiso}
+          alt="Unidos por una causa"
+          class="w-full h-full object-cover"
+          widths={[240 ,540, 720, 1080, compromiso.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1440px) 1024px, ${compromiso.width}px`}
+        />
+      </picture>
+    </div>
+  </div>
+</section>

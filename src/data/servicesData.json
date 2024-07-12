@@ -113,6 +113,67 @@
       ]
     },
     {
+      "id": "impuestos",
+      "title": "Impuestos",
+      "items":[
+        {
+          "contable": true,
+          "title": "Preparación de declaración anual de renta:",
+          "content": "Simplificamos tu declaración de renta para cumplir con tus obligaciones fiscales anuales."
+        },
+        {
+          "contable": true,
+          "title": "Reporte de conciliación fiscal para la Administración Tributaria:",
+          "content": "Preparamos el reporte necesario para la Administración Tributaria, garantizando la precisión y cumplimiento normativo."
+        },
+        {
+          "contable": true,
+          "title": "Cálculo anual de provisión de renta e impuesto diferido:",
+          "content": "Realizamos los cálculos necesarios para la provisión de renta e impuesto diferido, optimizando tu planificación fiscal."
+        },
+        {
+          "contable": true,
+          "title": "Declaración de activos en el exterior:",
+          "content": "Cumplimos con la preparación de la declaración de tus activos en el exterior según las regulaciones pertinentes."
+        },
+        {
+          "contable": true,
+          "title": "Elaboración de medios magnéticos nacionales y municipales:",
+          "content": "Simplificamos tus obligaciones fiscales con la elaboración de medios magnéticos para entidades nacionales y municipales."
+        },
+        {
+          "contable": true,
+          "title": "Declaraciones recurrentes de retención en la fuente, autorretención a título de renta, IVA e ICA:",
+          "content": "Nos encargamos de todas tus declaraciones recurrentes, asegurando el cumplimiento tributario en retenciones, autorretenciones e impuestos indirectos."
+        },
+        {
+          "contable": true,
+          "title": "Respuesta a requerimientos de información de la DIAN o autoridades distritales:",
+          "content": "Atendemos y respondemos a los requerimientos ordinarios de información de la DIAN u otras autoridades tributarias."
+        },
+        {
+          "contable": true,
+          "title": "Actualización del RUT y el RIT, y solicitudes de autorización de facturación:",
+          "content": "Mantenemos al día tu Registro Único Tributario (RUT) y Registro de Información Tributaria (RIT), y gestionamos autorizaciones de facturación."
+        },
+        {
+          "contable": true,
+          "title": "Atención de consultas internas recurrentes sobre operación:",
+          "content": "Estamos disponibles para resolver tus consultas internas recurrentes sobre operación y asuntos tributarios."
+        },
+        {
+          "contable": true,
+          "title": "Solicitud de devoluciones de saldos a favor de impuestos:",
+          "content": "Gestionamos las solicitudes de devolución de saldos a favor de impuestos, asegurando el aprovechamiento efectivo de tus recursos financieros."
+        },
+        {
+          "contable": false,
+          "title": "",
+          "content": "Además, ofrecemos servicios de auditoría contable y financiera para garantizar la precisión y conformidad con las normativas fiscales y contables vigentes."
+        }
+      ]
+    },
+    {
       "id": "asesoria",
       "title": "Asesoría y Consultoría",
       "items": [
@@ -177,67 +238,6 @@
           "contable":false,
           "title": "",
           "content":"Con nuestra combinación de servicios, te ayudamos a mantener la salud financiera de tu empresa, cumplir con las obligaciones tributarias y mejorar la eficiencia en la gestión de tus recursos."
-        }
-      ]
-    },
-    {
-      "id": "revisoria",
-      "title": "Revisoría Fiscal",
-      "items":[
-        {
-          "contable": true,
-          "title": "Preparación de declaración anual de renta:",
-          "content": "Simplificamos tu declaración de renta para cumplir con tus obligaciones fiscales anuales."
-        },
-        {
-          "contable": true,
-          "title": "Reporte de conciliación fiscal para la Administración Tributaria:",
-          "content": "Preparamos el reporte necesario para la Administración Tributaria, garantizando la precisión y cumplimiento normativo."
-        },
-        {
-          "contable": true,
-          "title": "Cálculo anual de provisión de renta e impuesto diferido:",
-          "content": "Realizamos los cálculos necesarios para la provisión de renta e impuesto diferido, optimizando tu planificación fiscal."
-        },
-        {
-          "contable": true,
-          "title": "Declaración de activos en el exterior:",
-          "content": "Cumplimos con la preparación de la declaración de tus activos en el exterior según las regulaciones pertinentes."
-        },
-        {
-          "contable": true,
-          "title": "Elaboración de medios magnéticos nacionales y municipales:",
-          "content": "Simplificamos tus obligaciones fiscales con la elaboración de medios magnéticos para entidades nacionales y municipales."
-        },
-        {
-          "contable": true,
-          "title": "Declaraciones recurrentes de retención en la fuente, autorretención a título de renta, IVA e ICA:",
-          "content": "Nos encargamos de todas tus declaraciones recurrentes, asegurando el cumplimiento tributario en retenciones, autorretenciones e impuestos indirectos."
-        },
-        {
-          "contable": true,
-          "title": "Respuesta a requerimientos de información de la DIAN o autoridades distritales:",
-          "content": "Atendemos y respondemos a los requerimientos ordinarios de información de la DIAN u otras autoridades tributarias."
-        },
-        {
-          "contable": true,
-          "title": "Actualización del RUT y el RIT, y solicitudes de autorización de facturación:",
-          "content": "Mantenemos al día tu Registro Único Tributario (RUT) y Registro de Información Tributaria (RIT), y gestionamos autorizaciones de facturación."
-        },
-        {
-          "contable": true,
-          "title": "Atención de consultas internas recurrentes sobre operación:",
-          "content": "Estamos disponibles para resolver tus consultas internas recurrentes sobre operación y asuntos tributarios."
-        },
-        {
-          "contable": true,
-          "title": "Solicitud de devoluciones de saldos a favor de impuestos:",
-          "content": "Gestionamos las solicitudes de devolución de saldos a favor de impuestos, asegurando el aprovechamiento efectivo de tus recursos financieros."
-        },
-        {
-          "contable": false,
-          "title": "",
-          "content": "Además, ofrecemos servicios de auditoría contable y financiera para garantizar la precisión y conformidad con las normativas fiscales y contables vigentes."
         }
       ]
     },
